@@ -8,6 +8,7 @@
 # Function to update Debian-based systems (e.g., Ubuntu, Debian)
 update_debian() {
     echo "Updating Debian-based system..."
+    sudo apt --fix-broken install
     sudo apt update -y
     sudo apt upgrade -y
     sudo apt dist-upgrade -y
