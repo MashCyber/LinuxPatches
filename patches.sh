@@ -61,7 +61,8 @@ update_solaris() {
 if [ -f /etc/os-release ]; then
     # For modern systems with /etc/os-release
     . /etc/os-release
-    DISTRO_NAME=$(cat /etc/os-release | grep "ID=" | awk -F= '{print $2}' | sed 's/"//g' | head -1 )
+    # DISTRO_NAME=$(cat /etc/os-release | grep "ID=" | awk -F= '{print $2}' | sed 's/"//g' | head -1 )
+    DISTRO_NAME=$ID
 else
     # Fallback in case /etc/os-release is missing (very rare)
     echo "Cannot determine distribution. Exiting."
