@@ -84,8 +84,8 @@ case "$DISTRO_NAME" in
         update_suse
         ;;
 	solaris)
-		update_solaris
-		;;
+	update_solaris
+	;;
     *)
         echo "Unsupported Linux distribution: $DISTRO_NAME"
         exit 1
